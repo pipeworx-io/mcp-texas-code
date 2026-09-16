@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipeworx-io/texas-code",
+  "title": "Texas Code",
+  "description": "Texas Statutes — state statutes by citation.",
+  "version": "0.1.0",
+  "websiteUrl": "https://pipeworx.io/packs/texas-code",
+  "repository": {
+    "url": "https://github.com/pipeworx-io/mcp-texas-code",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gateway.pipeworx.io/texas-code/mcp"
+    }
+  ]
+}
