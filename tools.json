@@ -1,0 +1,31 @@
+[
+  {
+    "name": "tx_statute",
+    "description": "Get the FULL TEXT of a section of the Texas Statutes — Texas state law — by citation. \"Texas Penal Code 19.02\" is code \"PE\", section \"19.02\" (murder). Returns the statutory text and its amendment history. Keyless. Use for \"what does Texas Penal Code 19.02 say\", \"text of Tex. Fam. Code 6.001\", or to check a Texas statute a case relies on.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "Texas code abbreviation, e.g. \"PE\" (Penal), \"FA\" (Family), \"CP\" (Civil Practice and Remedies), \"TX\" (Tax). Call tx_codes to see them."
+        },
+        "section": {
+          "type": "string",
+          "description": "Section as cited, e.g. \"19.02\" or \"6.001\". The chapter is the part before the dot."
+        }
+      },
+      "required": [
+        "code",
+        "section"
+      ]
+    }
+  },
+  {
+    "name": "tx_codes",
+    "description": "List the Texas codes with their subjects — Penal Code is PE, Family Code is FA, Tax Code is TX, and so on. Keyless. Use when you know the subject but not the code abbreviation, before calling tx_statute.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  }
+]
